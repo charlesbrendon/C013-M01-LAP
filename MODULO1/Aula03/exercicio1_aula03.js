@@ -10,11 +10,11 @@ console.log()
 n2 = prompt('Digite outro numero: ');
 console.log()
 if (n1 > n2){
-  console.log(n1, 'É o maior numero')
+  console.log(n1, 'É o maior numero');
 }
 else if ( n2 > n1){
-  console.log(n2, 'É o maior numero')
+  console.log(n2, 'É o maior numero');
 }
 else if (n1 = n2){
-  console.log('Você digitou o mesmo numero')
+  console.log('Você digitou o mesmo numero');
 }

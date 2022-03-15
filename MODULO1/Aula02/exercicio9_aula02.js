@@ -8,5 +8,5 @@ let final
 
 final = valorReal / valorDolar
 
-console.log(`Valor em Dolares é de $ ${final.toFixed(2)} `)
+console.log(`Valor em Dolares é de $ ${final.toFixed(2)} `);
 

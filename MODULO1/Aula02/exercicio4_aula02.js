@@ -7,4 +7,4 @@ const prompt = require('prompt-sync')()
                    SHIRLEY  7.0
 */
 
-console.log('\nALUNO(A) NOTA \nALINE    9.0 \nMÁRI0    DEZ \nSÉRGO    4.5 \nSHIRLEY  7.0')
+console.log('\nALUNO(A) NOTA \nALINE    9.0 \nMÁRI0    DEZ \nSÉRGO    4.5 \nSHIRLEY  7.0');

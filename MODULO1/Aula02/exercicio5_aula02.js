@@ -5,14 +5,14 @@ const prompt = require('prompt-sync')()
 let nome
 let tel
 let p1
-nome = prompt('Digite nome do cliente: ')
-tel = +prompt('Digite número do telefone:')
-console.log(`\nCliente: ${nome} \nTelefone: ${tel}`)
-console.log()
-p1 = prompt('Qual informação voce quer? nome ou telefone: ')
+nome = prompt('Digite nome do cliente: ');
+tel = +prompt('Digite número do telefone:');
+console.log(`\nCliente: ${nome} \nTelefone: ${tel}`);
+console.log();
+p1 = prompt('Qual informação voce quer? nome ou telefone: ');
 if (nome){
-  console.log(nome)
+  console.log(nome);
 }
 else if(telefone){
-  console.log(tel)
+  console.log(tel);
 }

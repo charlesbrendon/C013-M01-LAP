@@ -5,8 +5,8 @@ const prompt = require('prompt-sync')()
 let numero = +prompt('Digite um numero par');
 
 while (numero % 2 != 0 ){
-  console.log('numero nao é par')
-  numero = +prompt('Digite um numero par:')
+  console.log('numero nao é par');
+  numero = +prompt('Digite um numero par:');
   continue
 }
-  console.log(`esse numero ${numero} é par`)
+  console.log(`esse numero ${numero} é par`);

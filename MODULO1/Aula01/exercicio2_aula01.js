@@ -7,15 +7,15 @@ let peca2 = []
 const v1 = 46.60
 const v2 = 22.20
 
-  peca1 = prompt('Digite o nome do primeiro item : ')
-  peca2 = prompt('Digite o nome do segundo item : ')
+  peca1 = prompt('Digite o nome do primeiro item : ');
+  peca2 = prompt('Digite o nome do segundo item : ');
 
-console.log(`As suas compras são: \n1- ${peca1}, \n2- ${peca2}, `, )
+console.log(`As suas compras são: \n1- ${peca1}, \n2- ${peca2}, `, );
 
 let compra1 = +prompt(`Digite a quantidade de ${peca1} que deseja comprar`);
 console.log();
 let compra2 = +prompt(`Digite a quantidade de ${peca2} que deseja comprar`);
 
-valorFinal = ((v1 * compra1) + (v2 * compra2))
+valorFinal = ((v1 * compra1) + (v2 * compra2));
 
 console.log(`Valor final ficou de R$ ${valorFinal}`);

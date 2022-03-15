@@ -6,9 +6,9 @@ let nome = prompt('Digite um usuario: ');
 let senha = prompt('Digite uma senha: ');
 
 while (nome == senha){
-    console.log('usuario e senha não podem ser iguais')
-    nome = prompt('Digite um usuario: ')
-    senha = prompt('Digite uma senha: ')
+    console.log('usuario e senha não podem ser iguais');
+    nome = prompt('Digite um usuario: ');
+    senha = prompt('Digite uma senha: ');
     continue
 }
   

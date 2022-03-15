@@ -8,10 +8,10 @@ let n2 = prompt('Digite a segunda de 0 a 10, sabendo que a nota tem peso 6: ');
 let media
 
 if(n1 = (n1*4)/10){
-  console.log(`A primeira nota é: ${n1.toFixed(1)}`)
+  console.log(`A primeira nota é: ${n1.toFixed(1)}`);
 };
 if(n2 = (n2*6)/10){
-  console.log(`A segunda nota é: ${n2.toFixed(1)}`)
+  console.log(`A segunda nota é: ${n2.toFixed(1)}`);
 };
 media = (n1 + n2)/2
-console.log(`A média do aluno é ${media.toFixed(1)}`)
+console.log(`A média do aluno é ${media.toFixed(1)}`);
