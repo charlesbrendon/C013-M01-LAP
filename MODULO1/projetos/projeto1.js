@@ -16,33 +16,37 @@ let p5 = prompt('Kabofum conseguiu fazer fogo?');
 console.log();
 let sim = 0;
 
-if (p1 === 'sim'){
+if (p1 == 'sim'){
     sim++
 };
-if (p2 === 'sim'){
+if (p2 == 'sim'){
     sim++
 };
-if (p3 === 'sim'){
+if (p3 == 'sim'){
     sim++
 };
-if (p4 === 'sim'){
+if (p4 == 'sim'){
     sim++
 };
-if (p5 === 'sim'){
+if (p5 == 'sim'){
     sim++
-}else 
-console.log('Kabufum falhou miseravelmente');
+};
+ console.log('><><><><><><><><><><><><><><><><><><>')
 
-if( sim === 1 && 2){
+
+if(sim == 0){
+    console.log('Kabufum falhou miseravelmente');
+
+}if(sim == 1 || sim == 2){
     console.log('Kabufum falhou, mas ainda consegue fugir da situação.')
-};
-if( sim === 3){
+
+}if(sim == 3){   
     console.log('Kabufum chega perto de conseguir alcançar seu objetivo, mas acaba falhando por pouco.')
-};
-if( sim === 4){
+
+}if(sim == 4){
     console.log('Depois de muito esforço Kabufum conquista seu objetivo, embora não de maneira perfeita.')
-};
-if( sim === 5){
+
+}if(sim == 5){
     console.log('Kabufum triunfa de maneira inquestionável e seus feitos serão lembrados por muitas gerações.')
 };
 console.log(typeof(sim));
