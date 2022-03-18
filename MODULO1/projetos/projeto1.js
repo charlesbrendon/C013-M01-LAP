@@ -31,9 +31,8 @@ if (p4 == 'sim'){
 if (p5 == 'sim'){
     sim++
 };
- console.log('><><><><><><><><><><><><><><><><><><>')
-
-
+console.log('><><><><><><><><><><><><><><><><><><>')
+console.log();
 if(sim == 0){
     console.log('Kabufum falhou miseravelmente');
 
@@ -49,5 +48,5 @@ if(sim == 0){
 }if(sim == 5){
     console.log('Kabufum triunfa de maneira inquestionável e seus feitos serão lembrados por muitas gerações.')
 };
-console.log(typeof(sim));
-console.log(sim);
+console.log();
+console.log('><><><><><><><><><><><><><><><><><><>')
