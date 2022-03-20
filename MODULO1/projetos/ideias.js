@@ -27,10 +27,18 @@ const prompt = require('prompt-sync')()
 // }
 
 
-//
-let rodadas =+prompt(`Rodadas: `);
-console.log(rodadas);
+// //
+// let rodadas =+prompt(`Rodadas: `);
+// console.log(rodadas);
 
-for(let i=0; i<rodadas; i++){
-console.log('RODADAS')
+// for(let i=0; i<rodadas; i++){
+// console.log('RODADAS')
+// }
+do{
+    console.log('Quantas rodadas você deseja jogar?');
+    rodadas = prompt();
 }
+while (rodadas != parseInt(rodadas)) {
+    console.log(`Quantidade de rodadas escolhidas: ${rodadas}`)
+}
+  

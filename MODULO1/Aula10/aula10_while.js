@@ -1,6 +1,27 @@
 console.clear();
 const prompt = require('prompt-sync')();
 
+
+
+// // Verificando mais de uma condição
+// let numero = +prompt('Digite um número: ');
+
+// console.log('Maior que zero: ');
+// console.log(numero > 0);
+// console.log('É par: ');
+// console.log(numero % 2 == 0);
+// console.log();
+
+// console.log('Maior que 0    OU    É par')
+// console.log(numero > 0 || numero % 2 == 0);
+// console.log('Maior que 0    E    É par')
+// console.log(numero > 0 && numero % 2 == 0);
+
+
+
+
+
+
 // let filmes = ['Jurassic Park','O Exorcista','Tubarão']
 
 // console.log('Digite o nome do filme para adicionar à lista: ');
@@ -35,10 +56,12 @@ const prompt = require('prompt-sync')();
 
 
 
-// let listaClientes = ['Darlan', 'Gabriel', 'Alexandre'];
 
+
+// let listaClientes = ['Darlan', 'Gabriel', 'Alexandre'];
 // let continua = 's';
 
+// // Revisão de Break, Continue, Validação de dados
 // while (continua == 's'){
 //     let verificaCliente = prompt('Digite o nome do cliente: ');
 //     if (listaClientes.includes(verificaCliente)){
@@ -55,55 +78,18 @@ const prompt = require('prompt-sync')();
 //     console.log('Digite o telefone do cliente para adicionar: ');
 //     let telefone = prompt();
 
+//     // Enquanto o tamanho da string telefone for diferente de 9, vai pedir novamente.
 //     while (telefone.length != 9){
 //         console.log('Telefone inválido!!!');
 //         console.log('Digite o telefone do cliente para adicionar: ');
 //         telefone = prompt();
 //     }
 
+//     // Depois de passar por taodas as validações, adiciona o cliente à lista.
 //     listaClientes.push(verificaCliente);
 
+//     // Atribui um novo valor à variavel continua, para testar o while inicial novamente e ver se vai rodar tudo de novo
 //     continua = prompt('Deseja cadastrar outro cliente? ')
 // }
 
-
-
-
-
-// // Verificando mais de uma condição
-// let numero = +prompt('Digite um número: ');
-
-// console.log('Maior que zero: ');
-// console.log(numero > 0);
-// console.log('É par: ');
-// console.log(numero % 2 == 0);
-// console.log();
-
-// console.log('Maior que 0    OU    É par')
-// console.log(numero > 0 || numero % 2 == 0);
-// console.log('Maior que 0    E    É par')
-// console.log(numero > 0 && numero % 2 == 0);
-
-// console.log();
-
-
-
-
-let nome = ['charles', 'julia', 'rosi','maria'];
-let charles = 0;
-
-console.log(nome);
 console.log();
-console.log(nome.length);
-console.log();
-for(let elemento of nome){
-    console.log('cada vez que repete, recebe o valor diferente')
-    console.log(elemento);
-    if(elemento === 'charles')
-    console.log('Achei Charles!')
-    charles++
-};
-
-console.log(charles);
-
-console.log(`quantidade de charles encontrados ${charles}`);
