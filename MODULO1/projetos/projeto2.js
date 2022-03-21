@@ -31,7 +31,7 @@ console.log('*******Projeto 2 - ⓙ ⓞ ⓚ ⓔ ⓝ ⓟ ô*******');
   
   do{
     console.log('Quantas rodadas você deseja jogar?');
-    rodadas = prompt();
+    rodadas = +prompt();
 }
 while (rodadas != parseInt(rodadas)) {
     console.log(`Quantidade de rodadas escolhidas: ${rodadas}`)
