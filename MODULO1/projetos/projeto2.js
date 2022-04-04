@@ -65,7 +65,8 @@ if(escolhaPc == 0){
 }else if(escolhaPc == 2){
     console.log('A escolha do computador é: TESOURA');
 }
-
+prompt("Pressione ENTER para continuar")
+console.clear();
 console.log('*******Projeto 2 - ⓙ ⓞ ⓚ ⓔ ⓝ ⓟ ô*******');
 
 // Comparar os valores e declarar o vencedor (marcando 1 vitória para ele);
