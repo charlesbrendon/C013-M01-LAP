@@ -1,10 +1,21 @@
 console.clear();
 const prompt = require("prompt-sync")();
+const figlet = require("figlet");
+const colors = require("colors");
+
 console.log();
-console.log(`
-🄿 🅁 🄾 🄹 🄴 🅃 🄾   🄵 🄸 🄽 🄰 🄻
-🄹 🄾 🄶 🄾   🄳 🄴   🄵 🄸 🄲 🄲 🄰 🄾   🄸 🄽 🅃 🄴 🅁 🄰 🅃 🄸 🅅 🄰
-`);
+console.log(
+  figlet.textSync(`
+  PROJETO 
+  FINAL`, {
+    font: "doom",
+    horizontalLayout: "default",
+    verticalLayout: "default",
+    width: 100,
+    whitespaceBreak: false,
+  }).red
+  
+)
 console.log();
 console.log(`
 Dê nome ao seu personagem e enfrente inimigos poderosos e conquiste itens e fique ainda mais forte!
@@ -49,6 +60,10 @@ do {
   let relogio = {
     hora: 7,
     dia: 1,
+    qtdTreino: 0,
+    qtdViajar: 0,
+    qtdLorencia: 0,
+    qtdArena: 0,
 
     passaTempo: function (tempo) {
       this.hora += tempo;
@@ -56,6 +71,10 @@ do {
       if (this.hora > 24) {
         this.dia++;
         this.hora = 7;
+        this.qtdTreino = 0;
+        this.qtdViajar = 0;
+        this.Lorencia = 0;
+        this.qtdArena = 0;
       }
     },
   };
@@ -67,46 +86,59 @@ do {
     vitalidade: 10,
     energia: 10,
     vivo: true,
+    vitoria: false,
     armas: [],
     protecao: [],
     aliados: [],
     inimigos: [],
 
     atribuirNome: function () {
-      this.nome = prompt("Digite o nome: ");
+      this.nome = prompt("Digite o nome: ".blue);
     },
 
     diminuiVida: function (dano) {
       console.log(`
     Você tomou: ${dano} de dano.
-     `);
+     `.red);
       this.vitalidade -= dano;
       if (this.vitalidade <= 0) {
         this.fimdejogo();
       }
     },
-
+   
     fimdejogo: function () {
       this.vivo = false;
       console.log(
-        `Infelizmente, ${personagem.nome} não obteve exito, e acabou morrendo`
+        `Infelizmente, ${personagem.nome} não obteve exito, e acabou morrendo`.red
       );
+    }, 
+    fimdejogo2: function () {
+        this.vitoria = true
+        console.log(`Parabéns! Não fez mais que sua obrigação`);
+      
     },
-
     aumentaForca: function (aumentaforca) {
-      console.log(`${personagem.nome} aumentou a força em ${aumentaforca}`);
+      console.log(`${personagem.nome} aumentou a força em ${aumentaforca}`. green);
       this.forca += aumentaforca;
+      
+      if(personagem.forca >=34){
+        this.fimdejogo2();
+      }    
     },
+    
+
     aumentaAgilidade: function (aumentaagilidade) {
-      console.log(`${personagem.nome} aumentou a agilidade em ${aumentaagilidade}`);
+      console.log(
+        `${personagem.nome} aumentou a agilidade em ${aumentaagilidade}` .green);
       this.agilidade += aumentaagilidade;
     },
     aumentaVitalidade: function (aumentavitalidade) {
-      console.log(`${personagem.nome} aumentou a vitalidade em ${aumentavitalidade}`);
+      console.log(
+        `${personagem.nome} aumentou a vitalidade em ${aumentavitalidade}`.green);
       this.vitalidade += aumentavitalidade;
     },
     aumentaEnergia: function (aumentaenergia) {
-      console.log(`${personagem.nome} aumentou a energia em ${aumentaenergia}`);
+      console.log(`${personagem.nome} aumentou a energia em ${aumentaenergia} `.green);
       this.energia += aumentaenergia;
     },
 
@@ -148,7 +180,7 @@ do {
   // Exibir nome do seu personagem
   console.log(`
   O nome do seu personagem é: ${personagem.nome} 
-  `);
+  `.blue);
   // Função que chama o status do personagem
   function exibirstatus() {
     console.log(`
@@ -165,9 +197,10 @@ do {
 
   Inimigos encontrados: ${personagem.inimigos}
 
-  `);
+  `.blue);
+    prompt(`
+    Aperte uma tecla para continuar.`.red.bold);
   }
-  exibirstatus();
   // treinar com aliados
   function treinar() {
     console.clear();
@@ -246,8 +279,8 @@ do {
     console.log(
       `Você encontrou um aliado!!
        ${
-        personagem.aliados[personagem.aliados.length - 1]
-      }, e te presenteou com ${
+         personagem.aliados[personagem.aliados.length - 1]
+       }, e te presenteou com ${
         personagem.protecao[personagem.protecao.length - 1]
       }`
     );
@@ -270,6 +303,7 @@ do {
       );
       console.log();
     } else {
+      personagem.diminuiVida(3);
       personagem.pegarArmas;
       personagem.pegarProtecao;
       console.log(
@@ -279,15 +313,14 @@ do {
           personagem.armas[personagem.armas.length - 1]
         } e ${personagem.protecao[personagem.protecao.length - 1]}`
       );
-    }
-    console.clear();
+    }    
     if (personagem.vivo == true) {
       console.log(
         `Viajar acarreta perigos, nessa jornada voce encontrou ${
           personagem.inimigos[personagem.inimigos.length - 1]
         } `
       );
-      if (personagem.vitalidade <= 2 || personagem.vitalidade != 0) {
+      if (personagem.vitalidade <= 2 && personagem.vitalidade != 0) {
         console.log(
           `Quase que você morre, por querer lutar em Arena. Aqui somente os fortes terão triunfo`
         );
@@ -298,7 +331,8 @@ do {
           } e conseguiu derrota-lo e conseguiu itens para seu inventário! `
         );
       }
-    } else {
+    } 
+    if(personagem.vivo == false) {
       console.log(
         `Viajar acarreta perigos, nessa jornada voce encontrou ${
           personagem.inimigos[personagem.inimigos.length - 1]
@@ -307,74 +341,87 @@ do {
     }
     exibirstatus();
   }
-
   // Função que chama as opções
   function exibirOpcoes() {
     console.log(`Escolha uma opção:`);
 
     for (let posicao in opcoes) {
-      console.log(`${Number(posicao) + 1} - ${opcoes[posicao]}`);
+      console.log(`
+      ${Number(posicao) + 1 } - ${opcoes[posicao]}
+      `.yellow);
     }
   }
-  // preciso criar um esquema de não escolha de uma das opcoes por mais de 3 vezes
-  // function contador() 
-  //   {
-  //       let count = 0;
-  //       count++;
-
-  //       if(count == 3){
-  //          console.log(`Voce ja tentou 3 vezes essa opcao, tente outra opcao`);
-
-  //       }
-  //     };
-   do{
-    
+  exibirstatus();
+  do {
+    console.clear();
+    console.log(`Hora e dia:`);
+    console.log(`Agora são ${relogio.hora} horas, do dia ${relogio.dia}.`.red.bold);
     console.log();
-    console.log(`Agora são ${relogio.hora} horas, do dia ${relogio.dia}.`);
-    console.log();
-    
+
     exibirOpcoes();
-    
-      let opcao = +prompt("Digite uma opção: ");
+    console.log();
+    let opcao = +prompt("Digite uma opção: ");
 
-      if (opcao == 1) {
-        // Treinar com aliados
+    if (opcao == 1) {
+      // Treinar com aliados
+      if (relogio.qtdTreino < 3) {
+        relogio.qtdTreino++;
         treinar();
-      } else if (opcao == 2) {
-        // Viajar pelos mapas
+      } else {
+        console.log();
+        prompt(`${personagem.nome} ja treinou 3 vezes hoje! Faça outra coisa!`);
+      }
+    } else if (opcao == 2) {
+      // Viajar pelos mapas
+      if (relogio.qtdViajar < 3) {
+        relogio.qtdViajar++;
         viajar();
-      } else if (opcao == 3) {
-        // Visitar Lorencia
+      } else {
+        console.log();
+        prompt(
+          `${personagem.nome} viajou pelos mapas de Devias, Dugeon e Tarkan por 3 vezes hoje! Faça outra coisa!`
+        );
+      }
+    } else if (opcao == 3) {
+      // Visitar Lorencia
+      if (relogio.qtdLorencia < 3) {
+        relogio.qtdLorencia++;
         lorencia();
-      } else if (opcao == 4) {
-        // Lutar em Arena
+      } else {
+        console.log();
+        prompt(`${personagem.nome} ficou muito tempo em Lorencia! Saia daqui!`);
+      }
+    } else if (opcao == 4) {
+      // Lutar em Arena
+      if (relogio.qtdArena < 3) {
+        relogio.qtdArena;
         lutar();
       } else {
-        console.log(`Opção invalida.
+        console.log();
+        prompt(
+          ` ${personagem.nome} batalhou por 3 vezes por hoje! Vá para outros lugares, amanha pdoerá batalhar mais! `
+        );
+      }
+    } else {
+      console.log(`Opção invalida.
       Digite uma opção:`);
-      }     
+    }
+  } while (personagem.vivo == true && personagem.vitoria == false);
+
+  if (personagem.vivo == true && personagem.vitoria == true) {
+    console.log();
+    console.log(`terminou batalha ganhador`.blue.bold);
+    console.log();
     
-    
-  }while (personagem.vivo == true)
-  {
-    console.clear
- prompt('Aperte uma tecla')    
-  } 
- 
-  if (personagem.vivo != false) {
-    
-    console.log(`terminou batalha ganhador`);
-    exibirstatus();
   } else {
-    
-    console.log(`terminou batalha perdedor`);
-    exibirstatus();
+    console.log();
+    console.log(`terminou batalha perdedor`.red.bold);
+    console.log();    
   }
-  do {  
-    console.log(`Iniciar o jogo novamente?
-    SIM
-    NÃO
-    `)  
+  do {
+    console.log(`Iniciar o jogo novamente? digite:`);
+    console.log(`SIM`.blue.bold);
+    console.log(`NAO`.red.bold);
     novojogo = prompt().toUpperCase();
   } while (novojogo != "SIM" && novojogo != "NAO");
   console.clear();

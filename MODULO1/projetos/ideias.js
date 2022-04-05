@@ -312,25 +312,39 @@ console.log();
 // console.log();
 // // armas do personagem
 // console.log(personagem.armas)
+// let cont
+// do{
 
-for(let i = 0; i < 3; i++)
-p1 = +prompt("Digite uma opção: ");
-    
-    if (p1 == 1) {
-        console.log(`1`)
-    
-    } else if (p1 == 2) {
-        console.log(`2:`)
+// let p1 = +prompt("Digite uma opção: ");
+   
+//     if (p1 == 1) {
+//         console.log(`1`)
+//     p1 =
+//     } else if (p1 == 2) {
+//         console.log(`2:`)
       
-    } else if (p1 == 3) {
-        console.log(`3`)
+//     } else if (p1 == 3) {
+//         console.log(`3`)
     
-    } else if (p1 == 4) {
-        console.log(`4`)   
-  }
-  else{
-    console.log(`Opção invalida.
-    Digite uma opção:`)
-  } 
-
+//     } else if (p1 == 4) {
+//         console.log(`4`)   
+//   }
+//   else{
+//     console.log(`Opção invalida.
+//     Digite uma opção:`)
+//   } 
+// }while(rodadas = 5){
+//     console.log(p1)
+// }
  
+
+const filmes = ["Jurassic Park", "O Senhor dos Aneis", "Harry Potter"];
+
+let cont = 3
+
+if(filmes[0]){
+   for(let i = 0; i < cont; i++){
+
+    console.log(filmes[0])
+   }
+}

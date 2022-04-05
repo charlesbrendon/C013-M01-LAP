@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "ascii-table": "^0.0.9",
+    "colors": "^1.4.0",
+    "figlet": "^1.5.2",
     "prompt-sync": "^4.2.0"
   }
 }
