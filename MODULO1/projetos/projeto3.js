@@ -5,17 +5,19 @@ const colors = require("colors");
 
 console.log();
 console.log(
-  figlet.textSync(`
+  figlet.textSync(
+    `
   PROJETO 
-  FINAL`, {
-    font: "doom",
-    horizontalLayout: "default",
-    verticalLayout: "default",
-    width: 100,
-    whitespaceBreak: false,
-  }).red
-  
-)
+  FINAL`,
+    {
+      font: "doom",
+      horizontalLayout: "default",
+      verticalLayout: "default",
+      width: 100,
+      whitespaceBreak: false,
+    }
+  ).red
+);
 console.log();
 console.log(`
 Dê nome ao seu personagem e enfrente inimigos poderosos e conquiste itens e fique ainda mais forte!
@@ -23,9 +25,32 @@ Dê nome ao seu personagem e enfrente inimigos poderosos e conquiste itens e fiq
 console.log();
 do {
   // listas das armas
-  let armas = ["greatsword", "axes", "katana", "spears", "bows", "hammers"];
+  let armas = [
+    "greatsword",
+    "axes",
+    "katana",
+    "spears",
+    "bows",
+    "hammers",
+    "Angelic Bow",
+    "Soulbringer Stick",
+    "Sonic Blade",
+    "Cyclone Sword",
+    "Miracle Staff",
+    "Devast Claws",
+  ];
   // listas dos equipamentos de proteção
-  let protecao = ["helm", "armor", "gloves", "pants", "boots", "shield"];
+  let protecao = [
+    "helm",
+    "armor",
+    "gloves",
+    "pants",
+    "boots",
+    "shield",
+    "magic pendant",
+    "magic ring",
+    "magic bracelet",
+  ];
   // listas dos aliados
   let aliados = [
     "Lumen the waitress",
@@ -38,6 +63,13 @@ do {
     "Wandering the merchant",
     "Zienna the arms saleswoman",
     "Hanzo the blacksmith",
+    "Jerint The Assistant",
+    "Gens Vanert Steward",
+    "Angela The Supplier",
+    "Oracle Layla",
+    "Safety Guardian",
+    "Royal Guard Captain Lorence",
+    "Mercenary Guild Manager Tercia",
   ];
   // listas dos inimigos
   let inimigos = [
@@ -55,6 +87,13 @@ do {
     "Golden Titan",
     "Hydra",
     "Kundun",
+    "Balrog",
+    "Bloody Golem",
+    "Berserker Warrior",
+    "Chain Scorpion",
+    "Crypta",
+    "Death King",
+    "Fire Golem",
   ];
   // Relógio
   let relogio = {
@@ -97,48 +136,54 @@ do {
     },
 
     diminuiVida: function (dano) {
-      console.log(`
+      console.log(
+        `
     Você tomou: ${dano} de dano.
-     `.red);
+     `.red
+      );
       this.vitalidade -= dano;
       if (this.vitalidade <= 0) {
         this.fimdejogo();
       }
     },
-   
+
     fimdejogo: function () {
       this.vivo = false;
       console.log(
-        `Infelizmente, ${personagem.nome} não obteve exito, e acabou morrendo`.red
+        `Infelizmente, ${personagem.nome} não obteve exito, e acabou morrendo`
+          .red
       );
-    }, 
+    },
     fimdejogo2: function () {
-        this.vitoria = true
-        console.log(`Parabéns! Não fez mais que sua obrigação`);
-      
+      this.vitoria = true;
     },
     aumentaForca: function (aumentaforca) {
-      console.log(`${personagem.nome} aumentou a força em ${aumentaforca}`. green);
+      console.log(
+        `${personagem.nome} aumentou a força em ${aumentaforca}`.green
+      );
       this.forca += aumentaforca;
-      
-      if(personagem.forca >=34){
+
+      if (personagem.forca >= 34) {
         this.fimdejogo2();
-      }    
+      }
     },
-    
 
     aumentaAgilidade: function (aumentaagilidade) {
       console.log(
-        `${personagem.nome} aumentou a agilidade em ${aumentaagilidade}` .green);
+        `${personagem.nome} aumentou a agilidade em ${aumentaagilidade}`.green
+      );
       this.agilidade += aumentaagilidade;
     },
     aumentaVitalidade: function (aumentavitalidade) {
       console.log(
-        `${personagem.nome} aumentou a vitalidade em ${aumentavitalidade}`.green);
+        `${personagem.nome} aumentou a vitalidade em ${aumentavitalidade}`.green
+      );
       this.vitalidade += aumentavitalidade;
     },
     aumentaEnergia: function (aumentaenergia) {
-      console.log(`${personagem.nome} aumentou a energia em ${aumentaenergia} `.green);
+      console.log(
+        `${personagem.nome} aumentou a energia em ${aumentaenergia} `.green
+      );
       this.energia += aumentaenergia;
     },
 
@@ -178,12 +223,15 @@ do {
   personagem.atribuirNome();
   console.clear();
   // Exibir nome do seu personagem
-  console.log(`
+  console.log(
+    `
   O nome do seu personagem é: ${personagem.nome} 
-  `.blue);
+  `.blue
+  );
   // Função que chama o status do personagem
   function exibirstatus() {
-    console.log(`
+    console.log(
+      `
   Nome: ${personagem.nome}
   Força: ${personagem.forca}
   Agilidade: ${personagem.agilidade}
@@ -197,9 +245,12 @@ do {
 
   Inimigos encontrados: ${personagem.inimigos}
 
-  `.blue);
-    prompt(`
-    Aperte uma tecla para continuar.`.red.bold);
+  `.blue
+    );
+    prompt(
+      `
+    Aperte uma tecla para continuar.`.red.bold
+    );
   }
   // treinar com aliados
   function treinar() {
@@ -313,7 +364,7 @@ do {
           personagem.armas[personagem.armas.length - 1]
         } e ${personagem.protecao[personagem.protecao.length - 1]}`
       );
-    }    
+    }
     if (personagem.vivo == true) {
       console.log(
         `Viajar acarreta perigos, nessa jornada voce encontrou ${
@@ -331,8 +382,8 @@ do {
           } e conseguiu derrota-lo e conseguiu itens para seu inventário! `
         );
       }
-    } 
-    if(personagem.vivo == false) {
+    }
+    if (personagem.vivo == false) {
       console.log(
         `Viajar acarreta perigos, nessa jornada voce encontrou ${
           personagem.inimigos[personagem.inimigos.length - 1]
@@ -346,16 +397,20 @@ do {
     console.log(`Escolha uma opção:`);
 
     for (let posicao in opcoes) {
-      console.log(`
-      ${Number(posicao) + 1 } - ${opcoes[posicao]}
-      `.yellow);
+      console.log(
+        `
+      ${Number(posicao) + 1} - ${opcoes[posicao]}
+      `.yellow
+      );
     }
   }
   exibirstatus();
   do {
     console.clear();
     console.log(`Hora e dia:`);
-    console.log(`Agora são ${relogio.hora} horas, do dia ${relogio.dia}.`.red.bold);
+    console.log(
+      `Agora são ${relogio.hora} horas, do dia ${relogio.dia}.`.red.bold
+    );
     console.log();
 
     exibirOpcoes();
@@ -412,11 +467,11 @@ do {
     console.log();
     console.log(`terminou batalha ganhador`.blue.bold);
     console.log();
-    
+    console.log(`Parabéns! Não fez mais que sua obrigação`.italic);
   } else {
     console.log();
     console.log(`terminou batalha perdedor`.red.bold);
-    console.log();    
+    console.log();
   }
   do {
     console.log(`Iniciar o jogo novamente? digite:`);
