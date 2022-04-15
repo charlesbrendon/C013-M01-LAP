@@ -1,0 +1,26 @@
+*{
+  padding: 0;
+  margin: 0;      
+}
+header{
+    background-color: #3f34e0;
+}
+
+#tituloDaPagina {
+    color: rgb(246, 246, 246);
+}
+.texto {
+    color: #ea7e20
+}
+
+
+section {
+    padding: 15px;
+    border: solid 1px #5e320b;
+    margin: 50px;
+}
+
+figure {
+    height: 150px;
+    weight: 300;
+}

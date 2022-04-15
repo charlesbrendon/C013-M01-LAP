@@ -1,0 +1,99 @@
+/* cor e formato do corpo */
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ca6702
+    }
+/* espaçamento do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+/* as tres divs que coloca o tamanho do texto */
+div #img1{
+    display: flex;
+    width: 250px
+}
+div #img2{
+    display: flex;
+    width: 250px
+}
+div #titulo{
+    display: flex;
+    justify-content:top;   
+    height:250px;
+    width: 100%;  
+
+}
+
+/* a class que coloca uma caixa ao lado da outra */
+.linha1 {
+    display: flex;
+    justify-content: space-between;
+}
+/* o container do texto com tamanho e bordas declaradas */
+div#container{    
+    width: 800px;
+    height: 100%;
+    padding: 15px;
+    border: 15px solid navy;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;    
+   
+}
+/* a classe do quadro de evolucões com bordas declaradas */
+.quadroEvo {
+    display: flex;      
+    width: 800px;
+    height: 50%;
+    padding: 15px;
+    border: 15px solid navy;
+    margin: 15px;
+    justify-content: space-between;
+
+    
+}
+
+.quadroEvo #evolucoes{
+    font-size: 30px;
+
+}
+button{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    background-color: white;
+    border: 13px solid navy;
+    border-radius: 3rem;    
+    cursor: pointer;
+    
+
+}
+/* Imagem do digimon fixa */
+  .quadroEvo img {    
+    width:300px;
+    
+} 
+/* imagem e texto antes do rodape separadas e com mudança no tamanho da fonte */
+div#quadroevolucao {
+    display: flex;
+    justify-content: space-between;    
+    font-size:40px;     
+}
+
+div.body-content{
+    /** Essa margem vai evitar que o conteudo fique por baixo do rodapé **/
+    margin-bottom: 40px;
+  }
+/* rodape dividido entre site com informações a respeito do anime e meu @ das redes sociais */
+  footer {
+    position: absolute;
+    
+    background-color: #ac6825;
+    color: #FFF;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    line-height: 100px;
+}
