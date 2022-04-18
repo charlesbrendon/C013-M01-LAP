@@ -1,8 +1,11 @@
 /* cor e formato do corpo */
 body {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: #ca6702
+    background-color: #ca6702;
+    margin: 0%
     }
 /* espaçamento do cabeçalho */
 header {
@@ -11,17 +14,19 @@ header {
 }
 /* as tres divs que coloca o tamanho do texto */
 div #img1{
-    display: flex;
-    width: 250px
+    display: flex;    
+    height:100%;
+    width: 100%;
 }
 div #img2{
     display: flex;
-    width: 250px
+    height:100%;
+    width: 100%;
 }
 div #titulo{
     display: flex;
     justify-content:top;   
-    height:250px;
+    height:100%;
     width: 100%;  
 
 }
@@ -29,7 +34,9 @@ div #titulo{
 /* a class que coloca uma caixa ao lado da outra */
 .linha1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
 }
 /* o container do texto com tamanho e bordas declaradas */
 div#container{    
@@ -37,25 +44,30 @@ div#container{
     height: 100%;
     padding: 15px;
     border: 15px solid navy;
-    margin: 15px;
+    /* margin: 15px; */
     font-size: 20px;
-    font-weight: bold;    
+    font-weight: bold;
+    justify-items: center;    
    
 }
 /* a classe do quadro de evolucões com bordas declaradas */
 .quadroEvo {
-    display: flex;      
+    display: flex;
+    flex-direction: column;
+    flex-wrap:  wrap;  
     width: 800px;
-    height: 50%;
+    height: 50%;;
     padding: 15px;
     border: 15px solid navy;
-    margin: 15px;
-    justify-content: space-between;
-
+    /* margin: 15px; */
+    /* justify-content: space-between; */
+    gap: 20px;
     
 }
 
 .quadroEvo #evolucoes{
+    display: flex;
+    flex-direction: column;
     font-size: 30px;
 
 }
@@ -71,15 +83,34 @@ button{
 
 }
 /* Imagem do digimon fixa */
-  .quadroEvo img {    
-    width:300px;
+  .quadroEvo #img {   
+      display: flex;         
+      flex-direction: column;
+      justify-content: center; 
+      width: 300px;
     
 } 
 /* imagem e texto antes do rodape separadas e com mudança no tamanho da fonte */
 div#quadroevolucao {
     display: flex;
-    justify-content: space-between;    
-    font-size:40px;     
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10%;
+    justify-content: center;    
+    /* font-size:40px;      */
+}
+
+h3{
+    align-items: center;
+    text-align: center;
+}
+
+#figuraEvolucao img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* height: 50vh; */
 }
 
 div.body-content{
@@ -88,8 +119,6 @@ div.body-content{
   }
 /* rodape dividido entre site com informações a respeito do anime e meu @ das redes sociais */
   footer {
-    position: absolute;
-    
     background-color: #ac6825;
     color: #FFF;
     width: 100%;

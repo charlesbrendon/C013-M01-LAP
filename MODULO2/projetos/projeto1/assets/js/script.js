@@ -23,7 +23,7 @@ elementoAlterar.addEventListener("click", () => {
         /* Verifica se é o segundo valor, se for troca para terceiro */
         elementoImg.src = "./assets/img/magnaAngemon.png";
         /* Troca a imagem do digimon */
-        elementoNome.innerText = "magnaAngemon";
+        elementoNome.innerText = "MagnaAngemon";
         /* Altera o nome */
         elementoEvolucao.innerText = "Perfeito";
         /* Altera a evolução */
