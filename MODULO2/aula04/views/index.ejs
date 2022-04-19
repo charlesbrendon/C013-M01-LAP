@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" >
+</head>
+<body>
+    <% cavaleirosDeOuro.forEach(element => { %>
+        <div class="card">
+            <div class="nome__do__cavaleiro"> <%= element.nome %> </div>
+            <div class="nome__do__cavaleiro"> <%= element.signos %> </div>
+
+            </div>
+       
+    <% }) %>
+
+   <!-- lista nao ordenada -->
+<ul>  
+
+<li> Ailton</li>
+<li> Daniel</li>
+<li> Thulio</li>
+<li> Daniel</li>
+<li> Daniel</li>
+
+</ul>
+
+<!-- uma lista ordenada -->
+<ol>
+    <li> Ailton</li>
+    <li> Daniel</li>
+    <li> Thulio</li>
+    <li> Daniel</li>
+    <li> Daniel</li>
+
+
+</ol>
+
+</body>
+</html>
