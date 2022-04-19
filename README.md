@@ -6,9 +6,9 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=charlesbrendon" alt="charlesbrendon" /></a> </p>
 
-- 🌱 I’m currently learning **JavaScript**
+- 🌱 I’m currently learning **HTML** **JavaScript** **CSS**
 
-- 👨‍💻 All of my projects are available at [https://github.com/charlesbrendon/C013-M01-LAP/tree/main/MODULO1](https://github.com/charlesbrendon/C013-M01-LAP/tree/main/MODULO1)
+- 👨‍💻 All of my projects are available at [https://github.com/charlesbrendon/C013-M01-LAP/](https://github.com/charlesbrendon/C013-M01-LAP)
 
 - 📫 How to reach me **charlesbrendonss@gmail.com**
 
