@@ -1,4 +1,4 @@
-# Cavaleiros dos Zoodíacos
+# Pokedex
 
 ## Descrição
 Este projeto foi realizado com fins de aprendizado no curso de FullStack da BlueTech no ano de 2021  - módulo 2.
@@ -15,6 +15,6 @@ As ferramentas usadas para este projeto são:
 
 ## Contato
 
-<a href="https://www.linkedin.com/in/charles-suzart-851a9271/" target="_blank"> 
+<a href="https://www.linkedin.com/in/charles-suzart-851a9271/" target="blank"> 
     <img src="https://img.icons8.com/cute-clipart/128/000000/linkedin.png"/>
 </a>
