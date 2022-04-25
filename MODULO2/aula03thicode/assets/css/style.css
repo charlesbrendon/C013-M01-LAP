@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+main {
+    margin: 0 10rem 0 10rem;    
+}
+/* header {
+    margin: 0 10rem 0 10rem;    
+} */
+
+ul#menu{
+    list-style: none;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start; 
+    
+}
+ul#menu li{
+    padding: 0.7rem;   
+}
+
+nav {
+    background-color: #00aeff;
+}
+
+ul#menu li i {
+font-size: 2rem;
+color: #fff;
+}
+
+ul#menu li a {
+    color: #fff;
+    text-decoration: none;
+    }
+
+ul#menu li a:hover {
+        scale: scale(0.7rem) ;
+        color: black;       
+}
+
+ul#menu li:hover {
+           transform: scale(01.2) ;            
+            
+}
+
+header img{
+    width: 100%;
+}
+
+header h1{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+header p{
+    margin: 0 10rem 0 10rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+section#cursos h2{
+    text-align: center;
+}
+
+.card {
+    
+}

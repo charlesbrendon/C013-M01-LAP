@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    weight: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    height: 10%;
+    background-color: black;
+}
+
+header img#logo{
+    height: 100%;
+}
+
+
+header ul{
+    display: flex;           
+    list-style: none;
+    gap: 16px;  
+    
+}
+header a{
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover{
+    color: yellow;
+}
+
+
+main{
+    min-height: 80%;
+    padding: 10;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 200px;
+}
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+form fieldset fieldset{
+display: flex;
+flex-direction: row-reverse;
+gap: 16px;
+
+border: none;
+}
+form fieldset#fild_main{
+    border: 1px solid yellow;
+}
+
+form
+section#detalhes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table {
+    width: 400px;
+    text-align: center;
+    
+}
+table td {
+    border: 1px solid red;
+}
+table tr{
+    background-color: black;
+    color: white;
+}
+
+section#cavaleiros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+article.card{
+    height: 300px;
+    
+    border:1px solid black;
+}
+article.card img{
+    height: 100%;
+}
+
+article div.card_image{
+    height:85%;
+    border: 1px solid;
+}
+
+article.card div.nome__do__cavaleiro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    flex-direction: column;
+}
+ main section#test{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #EFBF26;
+}
+main section#test img{
+    width: 204px;
+
+}
+
+
+
+footer {
+    height: 10%;
+    background-color: black;
+}

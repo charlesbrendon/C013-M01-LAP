@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <section id="test">            
+            <img src="<%= cavaleiro.img %>"alt="<%= cavaleiro.nome %>">
+            <div>ID: <%= cavaleiro.id %></div>
+            <div>NOME:<%= cavaleiro.nome %></div>
+            <div>SIGNO:<%= cavaleiro.signos %></div>
+            
+            
+        </section>       
+
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

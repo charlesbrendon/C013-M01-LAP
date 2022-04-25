@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link href="/css/styledetalhes.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <main>
+            <section id="detalhes">
+              
+                <article class="cartao">
+                    <img id="img" src="<%= pokemon.image %>" alt="<%= pokemon.image %>">
+                    <article class="texto">
+                        <div>Nome: <%= pokemon.name %></div>
+                        <div>Altura: <%= pokemon.height %></div>
+                        <div>Peso: <%= pokemon.weight %></div>
+                        <div>Generos: <%= pokemon.gender %>                      </div>
+                        <div>Categoria:<%= pokemon.category %></div>
+                        <div>Habilidades: <%= pokemon.abilites %></div>
+                        <div>Tipo: <%= pokemon.type %></div>
+                        <div>Fraco contra: <%= pokemon.weakness %></div>
+                    </article>
+                </article>
+            </section>
+            <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
+<table>
+
+    <thead>
+        <td colspan="2">
+          Detalhes
+        </td>
+      </thead>
+      <img id="img" src="<%= pokemon.image %>" alt="<%= pokemon.image %>">
+<tbody>
+   
+    <tr>
+        <td>Nomes: </td>
+        <td><%= pokemon.name %></td>
+    </tr>
+
+    <tr>
+        <td>Altura: </td>
+        <td><%= pokemon.height %></td>
+    </tr>
+
+    <tr>
+        <td>Peso: </td>
+        <td><%= pokemon.weight %></td>
+    </tr>
+
+    <tr>
+        <td>Genero: </td>
+        <td><%= pokemon.gender %></td>
+    </tr>
+
+    <tr>
+        <td>Categoria: </td>
+        <td><%= pokemon.category %></td>
+    </tr>
+
+    <tr>
+        <td>Habilidades: </td>
+        <td><%= pokemon.abilites %></td>
+    </tr>
+
+    <tr>
+        <td>Tipo: </td>
+        <td><%= pokemon.type %></td>
+    </tr>
+
+    <tr>
+        <td>Fraco contra: </td>
+        <td><%= pokemon.weakness %></td>
+    </tr>
+
+</tbody>
+</table>

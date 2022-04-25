@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes</title>
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <section id="detalhes">
+      <h1><%= cavaleiro.nome %></h1>
+      <iframe <%=cavaleiro.iframe %> > </iframe>
+      <table>
+        <!-- <tr> </tr> table ro = linha de tableta -->
+        <!-- <td> </td> table ro = linha de tableta -->
+        <!-- <thead> </thead>
+            <tbody> </tbody>
+            <tfoot> </tfoot> -->
+
+        <thead>
+          <td colspan="2">
+            Detalhes
+          </td>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nomes: </td>
+            <td><%= cavaleiro.nome%></td>
+          </tr>
+
+          <tr>
+            <td>Signo: </td>
+            <td><%= cavaleiro.signo%></td>
+          </tr>
+          <tr>
+            <td>Tipo: </td>
+            <td><%= cavaleiro.tipo%></td>
+          </tr>
+        </tbody>
+    </table>
+</section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
