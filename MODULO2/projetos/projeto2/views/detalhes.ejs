@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    
+    <%- include('./partials/header.ejs') %>
+    <main>
+    <body>
+     <section id="card">
+       <div>
+      <table>
+        <img id="img" src="<%= pokemon.image %>" alt="<%= pokemon.image %>" />
+
+        <thead>
+          <td colspan="2">Detalhes</td>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>Nomes:</td>
+            <td><%= pokemon.name %></td>
+          </tr>
+
+          <tr>
+            <td>Altura:</td>
+            <td><%= pokemon.height %></td>
+          </tr>
+
+          <tr>
+            <td>Peso:</td>
+            <td><%= pokemon.weight %></td>
+          </tr>
+
+          <tr>
+            <td>Genero:</td>
+            <td><%= pokemon.gender %></td>
+          </tr>
+
+          <tr>
+            <td>Categoria:</td>
+            <td><%= pokemon.category %></td>
+          </tr>
+
+          <tr>
+            <td>Habilidades:</td>
+            <td><%= pokemon.abilites %></td>
+          </tr>
+
+          <tr>
+            <td>Tipo:</td>
+            <td><%= pokemon.type %></td>
+          </tr>
+
+          <tr>
+            <td>Fraco contra:</td>
+            <td><%= pokemon.weakness %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </section>
+      
+    </body>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+</html>

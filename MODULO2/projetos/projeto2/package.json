@@ -1,4 +1,23 @@
 {
+  "name": "pokedex",
+  "version": "0.0.1",
+  "description": "BlueEdtech evaluative project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e js,html,css,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlesbrendon/C013-M01-LAP.git#main"
+  },
+  "author": "Charles Brendon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlesbrendon/C013-M01-LAP/issues"
+  },
+  "homepage": "https://github.com/charlesbrendon/C013-M01-LAP/tree/main#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3"

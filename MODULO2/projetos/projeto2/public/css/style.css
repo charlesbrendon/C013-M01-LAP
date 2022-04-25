@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  weight: 100vw;
+  background: #e2e1e0;
+  font-family: "OCR A Std", monospace;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 50px;
+  align-items: center;
+  background-color: #3b7bca;
+}
+
+header a {
+  display: flex;
+  height: 100%;
+}
+header a img#logo {
+  display: flex;
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+header a {
+  font-weight: bold;
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  color: red;
+}
+
+ul li:hover {
+  transform: scale(01.2);
+}
+
+main {
+min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section#pokemons {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main section#pokemons a {
+  display: flex;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  flex-direction: column;
+}
+
+article.card {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 1%;
+  background-color: #ffffff;
+  padding: 0px 0px 15px 0px;
+  box-shadow: 1px 10px 10px #3b7bc4;
+  color: #112506;
+  width: 300px;
+}
+
+article.card:hover {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #333;
+  border-radius: 1%;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 100px #3b7bc4;
+  color: #112506;
+  width: 300px;
+}
+article.card img {
+  display: flex;
+  height: 300px;
+  align-items: flex-end;
+}
+
+article.card div.nome__do__pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  flex-direction: column;
+  font-size: 30px;
+  background: #3b7bca;
+  border: solid 1px black;
+}
+
+article.card div.card_image {
+  height: 85%;
+  border: 1px solid;
+}
+
+section#card {
+    min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+section#card div{
+    border: 2px solid black;
+}
+img#img {  
+  width: 300px;
+}
+
+table {
+  width: 100%;
+  background: #3b7bca;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: center;
+  
+}
+
+thead {
+  font-size: 32px;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#cadastro {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  align-content:center;
+}
+
+form {
+    
+    display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+}
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+  padding: 1% 0%;
+}
+legend {
+  font-size: 32px;
+}
+
+form fieldset fieldset {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 16px;
+
+  border: none;
+}
+button {
+  background: #3b7bca;
+  color: white;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  border-style: outset;
+  border-color: #3b7bca;
+  height: 50px;
+  width: 150px;
+  text-shadow: none;
+}
+
+button:hover {
+  background: #016abc;
+  color: white;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  border-style: outset;
+  border-color: #3b7bca;
+  height: 60px;
+  width: 160px;
+  text-shadow: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  bottom: 0;  
+  width: 100%;
+  text-align: center;  
+  height: 10vh;
+  background-color: #3b7bca;
+}
