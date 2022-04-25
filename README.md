@@ -22,7 +22,12 @@
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
+<div style="display: flex">
+    <img src="https://img.icons8.com/color/96/000000/javascript--v1.png"/>
+    <img src="https://img.icons8.com/ios-filled/100/000000/css3.png"/>
+    <img src="https://img.icons8.com/color/144/000000/html-5--v2.png"/>
+    <img src="https://img.icons8.com/color/144/000000/nodejs.png"/>
+</div>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=charlesbrendon&show_icons=true&locale=en" alt="charlesbrendon" /></p>
 
