@@ -1,0 +1,52 @@
+<header>
+    <div class="menu1">
+        <!-- <div class="nav">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+        <ul id="menu">
+            <a id="stylemenu" href="/">
+                <li> <i class="fa-solid fa-house"></i> Index </li>
+            </a>
+            <a id="stylemenu" href="/cadastro">
+                <li> <i class="fa-solid fa-circle-plus"></i> Criar </li>
+            </a>
+        </ul>
+
+    </div>
+</header>
+
+<script type="text/javascript">
+    const viewDropdown2 = () => {
+        const btnm = document.querySelectorAll("#nav");
+
+        btnm.forEach((btnm) => {
+            btnm.addEventListener("click", (evento) => {
+                console.log(event)
+                const content2 = event.path[1].children[2];
+                console.log(content2)
+                content.classList.toggle("active")
+
+                if (content.classList.contains("active")) {
+                    content.style.display = "block";
+
+                } else {
+                    content.style.display = "none";
+                }
+
+                content.addEventListener("mouseleave", ()=> {
+                content.classList.remove("active");
+                if(!content.classList.contains("active")){
+                    content.style.display = "none";
+                }
+            })
+
+
+
+            })
+        })
+
+    };
+
+
+    viewDropdown2();
+</script>

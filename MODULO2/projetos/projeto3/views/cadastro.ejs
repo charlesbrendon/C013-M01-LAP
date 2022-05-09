@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71f92ea1b3.js" crossorigin="anonymous"></script>
+    <title>Adcionar Filme</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section id="cadastro">
+      <form method="post" action="/cadastro">
+        <fieldset id="field_main">
+          <legend>Cadastre seu Filme</legend>
+          
+          
+          <div id="table">
+
+          <fieldset requeride class="fieldsetData">            
+            <label for="nome"> Nome do filme: </label>
+            <input requered type="text" name="nome"/>
+          </fieldset>
+
+          <fieldset requeride class="fieldsetData">            
+            <label for="diretor">Nome do diretor: </label>
+            <input requered type="text" name="diretor" />
+          </fieldset>
+
+          <fieldset  class="fieldsetData">
+            <label for="img"> Imagem(URL): </label>
+            <input requeride placeholder="Url com final .jpg ou .png" type="url" name="img" />
+            </fieldset>
+
+          <fieldset  class="fieldsetData">
+            <label for="duracao"> Duração: </label>
+            <input requeride placeholder="Coloque em minutos" type="int" name="duracao" />
+            
+          </fieldset>
+
+          <fieldset requeride class="fieldsetData">
+            <label for="ano"> Ano de Lançamento: </label>
+            <input requered type="text" name="ano" />
+            
+          </fieldset>
+
+          <fieldset class="fieldsetData">
+            <label for="iframe"> Iframe: </label>
+            <input requeride placeholder="link iframe do trailer" type="text" name="iframe" />
+            
+          </fieldset>                     
+          <div id="btnContainer">          
+          <button id="submit" type="submit">ENVIAR</button>
+           </div>
+
+          </div>
+        </fieldset>
+      </form>
+    </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

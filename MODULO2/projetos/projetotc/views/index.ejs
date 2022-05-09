@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/img/icone.png" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+      <section id="cards">
+        <h2 id="titulo">Lista de Pokémons</h2>
+        <% pokedex.forEach((pokemon,id) => { %>
+          <div class="card">
+            <div id="topo">
+              <p id="num"><%= pokemon.id %></p>
+              <h3><%= pokemon.nome %></h3>
+            </div>
+            <img id="img" src="<%= pokemon.imagem %>" alt="" />
+            <a id="editar" href="/getById/<%= pokemon.id %>/put">Editar</a>
+            <a id="apagar" href="/getById/<%= pokemon.id %>/delete %>">Apagar</a>
+          </div>
+        </a>
+        <% }) %>
+      </section>
+    </main>
+    <% if (pokemonPut != null) {%>
+      <%- include('./partials/modalPut.ejs')%>  <% } %>
+    <% if (pokemonDel != null) {%>
+        <%- include('./partials/modalDel') %>
+    <% } %>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

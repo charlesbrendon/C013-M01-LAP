@@ -1,0 +1,65 @@
+<section class="modal-overlay" id="ovarlay">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+          <h3>Atualizar Pokemon</h3>
+          <a href="/" id="close-modal-put">X</a>
+        </div>
+    
+        <div>
+            <form class="form-modal" action="/update/<%= pokemonPut.id %>" method="POST">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" value="<%= pokemonPut.nome %>" />
+    
+              <label for="tipo">Tipo:</label>
+              <input type="text" id="tipo" name="tipo" value="<%= pokemonPut.tipo %>" />
+
+              <label for="descricao">Descrição:</label>
+              <input
+                type="text"
+                id="descricao"
+                name="descricao"
+                value="<%= pokemonPut.descricao %>"
+              />
+
+              <label for="altura">Altura:</label>
+              <input
+                type="text"
+                name="altura"
+                id="altura"
+                value="<%= pokemonPut.altura %>"
+              />
+
+              <label for="peso">Peso:</label>
+            <input
+              type="text"
+              name="peso"
+              id="peso"
+              value="<%= pokemonPut.peso %>"
+            />
+
+            <label for="categoria">Categoria:</label>
+            <input
+              type="text"
+              name="categoria"
+              id="categoria"
+              value="<%= pokemonPut.categoria %>"
+            />
+
+            <label for="habilidade">Habilidade:</label>
+            <input
+              type="text"
+              name="habilidade"
+              id="habilidade"
+              value="<%= pokemonPut.habilidade %>"
+            />
+    
+              <label for="imagem">Link da Imagem</label>
+              <input type="text" id="imagem" name="imagem" value="<%= pokemonPut.imagem %>" />
+    
+              <button id="btnCadastrar" type="submit">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+

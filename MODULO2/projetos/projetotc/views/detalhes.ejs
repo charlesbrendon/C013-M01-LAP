@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" href="/img/icone.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body class="details">
+  <%- include('./partials/header.ejs') %>
+    <main>   
+      <section class="detalhes">
+        <p id="num"><%= pokemon.id %></p>
+                <h3><%= pokemon.nome %></h3>
+              </div>
+              <img id="img" src="<%= pokemon.imagem %>" alt="" /><p id="tipo">Tipo: <%= pokemon.tipo %></p>
+              <p class="descricao">Descrição: <%= pokemon.descricao %></p>
+              <p>Altura: <%= pokemon.altura %></p>
+              <p>Peso: <%= pokemon.peso %></p>
+              <p>Categoria: <%= pokemon.categoria %></p>
+              <p>Habilidade: <%= pokemon.habilidade %></p>
+      </section>
+    </main>
+    <script src="/public/script.js"></script>
+</body>
+  <%- include('./partials/footer.ejs') %>
+</html>

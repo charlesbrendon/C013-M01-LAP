@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/71f92ea1b3.js" 
+    crossorigin="anonymous"></script>    
+    <title> Index </title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+    <h1>Catálogo</h1>
+    <main>
+        
+        <section id="cardContainer">
+            
+            <% listFilmes.forEach(element => { %>
+            <div id="cardElemet">
+
+                <article class="cards">
+
+                    <div class="dropD">
+                        <div class="dropButton">
+                           <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+
+                        <div class="dropContent">
+
+                            <a id="btn2Container" onclick="deletar('<%=element.id%>')"> <i
+                                    class=" fa-solid fa-trash"></i>Deletar</a>
+                            <a id="btn2Container" href="/editar/<%= element.id %> "> <i
+                                    class=" fa-solid fa-pencil"></i>Editar</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="card_img">
+                        <img src="<%= element.img %> " alt="<%= element.nome %> ">
+                    </div>
+                    <div class="card_name">
+                        <a href="/detalhes/<%= element.id %> "><%= element.nome %></a>
+
+                    </div>
+
+                </article>
+
+                </a>
+            </div>
+            <% }) %>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+<script type="text/javascript">
+    function deletar(id) {
+        const i = id;
+        document.getElementById('cardContainer').innerHTML =
+            `<div id="CaixaDialogo"><div><span>Deseja realmente apagar este filme?</span></div><div id="btn"><button onclick="window.location.href='/deletar/${id}'"> SIM </button><button onclick="window.location.href='/'"> NÃO </button></div></div>`;
+    };
+</script>
+
+
+<script type="text/javascript">
+const viewDropdown = () =>{
+    const buttons = document.querySelectorAll(".dropButton");
+
+    buttons.forEach((btn)=>{
+        btn.addEventListener("click", (event) =>{
+            console.log(event)
+            const content = event.path[2].children[1];
+            console.log(content)
+            content.classList.toggle("active")
+
+            if(content.classList.contains("active")){
+                content.style.display = "block";
+
+            } else{
+                content.style.display = "none";
+            }
+
+            content.addEventListener("mouseleave", ()=> {
+                content.classList.remove("active");
+                if(!content.classList.contains("active")){
+                    content.style.display = "none";
+                }
+            })
+
+
+
+        })
+    })
+
+};
+
+
+
+viewDropdown(); 
+
+</script>
+
+
+</html>

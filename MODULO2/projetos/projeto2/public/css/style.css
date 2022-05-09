@@ -121,7 +121,7 @@ article.card div.card_image {
 }
 
 section#card {
-    min-height: 80vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -167,7 +167,7 @@ section#cadastro {
 
 form {
     
-    display: flex;
+  display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
